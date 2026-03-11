@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function Features() {
   const features = [
     {
@@ -25,17 +24,8 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(10,10,15,0.7), rgba(10,10,15,0.9)), url('/bg-bull.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-dark opacity-80" />
-      <AnimatedSection className="max-w-6xl mx-auto" staggerChildren=".feature-card" stagger={0.1} animation="fadeUp">
+    <section id="features" className="relative w-full py-24 px-6 section-glow section-divider overflow-hidden">
+      <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".feature-card" stagger={0.1} animation="fadeUp">
         <div className="feature-card text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Why Join Forex Rocket?

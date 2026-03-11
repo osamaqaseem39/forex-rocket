@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function SignalFormatSection() {
   const formatItems = [
     { label: "Pair", value: "EUR/USD", example: "The currency pair to trade" },
@@ -11,16 +10,16 @@ export default function SignalFormatSection() {
   ];
 
   return (
-    <section id="signal-format" className="relative py-24 px-6 section-glow overflow-hidden">
+    <section id="signal-format" className="relative w-full py-24 px-6 section-glow section-divider overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18,18,26,0.7), rgba(18,18,26,0.9)), url('/bg-bull.png')`,
+          backgroundImage: `url('/bg-bull.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
-      <AnimatedSection className="max-w-4xl mx-auto" staggerChildren=".format-item" stagger={0.08}>
+      <AnimatedSection className="max-w-4xl mx-auto w-full" staggerChildren=".format-item" stagger={0.08}>
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             What Each Signal Includes

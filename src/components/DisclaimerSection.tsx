@@ -1,17 +1,8 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function DisclaimerSection() {
   return (
-    <section id="disclaimer" className="relative py-16 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18,18,26,0.75), rgba(18,18,26,0.92)), url('/bg-bear.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <AnimatedSection className="max-w-3xl mx-auto" animation="fadeIn">
+    <section id="disclaimer" className="relative w-full py-16 px-6 section-glow section-divider section-alt overflow-hidden">
+      <AnimatedSection className="max-w-3xl mx-auto w-full" animation="fadeIn">
         <div className="glass rounded-2xl p-8 border border-red-500/20 text-center">
           <h2 className="text-xl font-bold mb-4 flex items-center justify-center gap-2">
             <span>⚠️</span> Risk Disclaimer

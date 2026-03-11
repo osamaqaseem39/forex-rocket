@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function RulesSection() {
   const rules = [
     "No financial advice – signals are for education only",
@@ -10,17 +9,8 @@ export default function RulesSection() {
   ];
 
   return (
-    <section id="rules" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(10,10,15,0.7), rgba(10,10,15,0.9)), url('/bg-bull.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-dark opacity-80" />
-      <AnimatedSection className="max-w-2xl mx-auto" staggerChildren=".rule-item" stagger={0.1}>
+    <section id="rules" className="relative w-full py-24 px-6 section-glow section-divider section-alt overflow-hidden">
+      <AnimatedSection className="max-w-2xl mx-auto w-full" staggerChildren=".rule-item" stagger={0.1}>
         <div className="glass rounded-3xl p-8 sm:p-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8">Server Rules</h2>
           <ul className="space-y-4 flex flex-col items-center">

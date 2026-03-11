@@ -14,7 +14,6 @@
   --text-primary: #f5f5f7;
   --text-secondary: #a1a1aa;
   --text-muted: #71717a;
-  --bg-image: url("/bg-image1.png");
 }
 
 * {
@@ -39,11 +38,23 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  opacity: 0.25;
+  background: radial-gradient(
+      ellipse 100% 80% at 50% 20%,
+      rgba(239, 68, 68, 0.08) 0%,
+      rgba(239, 68, 68, 0.03) 40%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 80% 80%,
+      rgba(239, 68, 68, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse 60% 50% at 20% 60%,
+      rgba(239, 68, 68, 0.04) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
   z-index: -2;
 }
 
@@ -112,17 +123,61 @@ body::after {
     0 -1px 0 rgba(255, 255, 255, 0.03) inset;
 }
 
-/* Section glow – ambient red glow behind section content */
-.section-glow::before {
+/* Section glow – round neon orbs at corners and random spots */
+.section-glow::before,
+.section-glow-default::before,
+.section-glow-bull::before,
+.section-glow-bear::before {
   content: "";
   position: absolute;
-  inset: -20%;
-  background: radial-gradient(
-    ellipse 70% 50% at 50% 50%,
-    rgba(239, 68, 68, 0.12) 0%,
-    rgba(239, 68, 68, 0.05) 40%,
-    transparent 70%
-  );
+  inset: -15%;
+  background:
+    /* Top-left corner */
+    radial-gradient(
+      circle 35% at 5% 8%,
+      rgba(239, 68, 68, 0.35) 0%,
+      rgba(239, 68, 68, 0.15) 25%,
+      rgba(239, 68, 68, 0.05) 50%,
+      transparent 70%
+    ),
+    /* Top-right corner */
+    radial-gradient(
+      circle 40% at 95% 12%,
+      rgba(239, 68, 68, 0.3) 0%,
+      rgba(239, 68, 68, 0.12) 25%,
+      rgba(239, 68, 68, 0.04) 50%,
+      transparent 70%
+    ),
+    /* Bottom-left corner */
+    radial-gradient(
+      circle 30% at 8% 92%,
+      rgba(239, 68, 68, 0.28) 0%,
+      rgba(239, 68, 68, 0.1) 25%,
+      rgba(239, 68, 68, 0.03) 50%,
+      transparent 70%
+    ),
+    /* Bottom-right corner */
+    radial-gradient(
+      circle 38% at 92% 88%,
+      rgba(239, 68, 68, 0.32) 0%,
+      rgba(239, 68, 68, 0.12) 25%,
+      rgba(239, 68, 68, 0.04) 50%,
+      transparent 70%
+    ),
+    /* Random mid-left */
+    radial-gradient(
+      circle 25% at 15% 55%,
+      rgba(239, 68, 68, 0.2) 0%,
+      rgba(239, 68, 68, 0.06) 40%,
+      transparent 65%
+    ),
+    /* Random mid-right */
+    radial-gradient(
+      circle 28% at 88% 42%,
+      rgba(239, 68, 68, 0.18) 0%,
+      rgba(239, 68, 68, 0.05) 40%,
+      transparent 65%
+    );
   pointer-events: none;
   z-index: -1;
 }
@@ -131,6 +186,13 @@ body::after {
 .text-glow {
   text-shadow: 0 0 20px rgba(239, 68, 68, 0.3), 0 0 40px rgba(239, 68, 68, 0.15);
 }
+
+/* Section separation – alternating backgrounds and dividers */
+.section-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 -1px 0 0 rgba(239, 68, 68, 0.08);
+}
+
 
 /* Gradient background */
 .bg-gradient-dark {

@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function AboutSection() {
   const values = [
     {
@@ -20,16 +19,16 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="relative py-24 px-6 section-glow overflow-hidden">
+    <section id="about" className="relative w-full py-24 px-6 section-glow section-divider overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18,18,26,0.7), rgba(18,18,26,0.9)), url('/bg-image2.png')`,
+          backgroundImage: `url('/bg-image2.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
-      <AnimatedSection className="max-w-6xl mx-auto" staggerChildren=".value-card" stagger={0.15}>
+      <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".value-card" stagger={0.15}>
         <div className="glass rounded-3xl p-8 sm:p-12 mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Forex Rocket</h2>
           <p className="text-[var(--text-secondary)] leading-relaxed mb-6 max-w-2xl mx-auto">

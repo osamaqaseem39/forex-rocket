@@ -15,9 +15,9 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="relative py-16 px-6 border-t border-white/5">
+    <footer className="relative w-full py-16 px-6 section-divider">
       <div className="absolute inset-0 -z-10 bg-[var(--bg-secondary)]" />
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-1">

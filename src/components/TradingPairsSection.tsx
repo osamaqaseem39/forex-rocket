@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function TradingPairsSection() {
   const pairs = [
     { symbol: "EUR/USD", name: "Euro / US Dollar", volatility: "Medium" },
@@ -13,16 +12,8 @@ export default function TradingPairsSection() {
   ];
 
   return (
-    <section id="pairs" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18,18,26,0.7), rgba(18,18,26,0.9)), url('/bg-bear.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <AnimatedSection className="max-w-6xl mx-auto" staggerChildren=".pair-card" stagger={0.05} animation="scale">
+    <section id="pairs" className="relative w-full py-24 px-6 section-glow section-divider overflow-hidden">
+      <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".pair-card" stagger={0.05} animation="scale">
         <div className="pair-card text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Trading Pairs We Cover

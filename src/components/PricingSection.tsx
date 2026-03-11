@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function PricingSection() {
   const tiers = [
     {
@@ -35,17 +34,8 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(10,10,15,0.7), rgba(10,10,15,0.9)), url('/bg-image1.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-dark opacity-80" />
-      <AnimatedSection className="max-w-4xl mx-auto" staggerChildren=".pricing-card" stagger={0.15}>
+    <section id="pricing" className="relative w-full py-24 px-6 section-glow section-divider section-alt overflow-hidden">
+      <AnimatedSection className="max-w-4xl mx-auto w-full" staggerChildren=".pricing-card" stagger={0.15}>
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Choose Your Plan

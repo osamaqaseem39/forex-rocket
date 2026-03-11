@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function EventsSection() {
   const events = [
     {
@@ -33,13 +32,8 @@ export default function EventsSection() {
   ];
 
   return (
-    <section id="events" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/bg-image2.png')" }}
-      />
-      <div className="absolute inset-0 -z-10 bg-[var(--bg-secondary)]/70" />
-      <AnimatedSection className="max-w-4xl mx-auto" staggerChildren=".animate-reveal" stagger={0.08} animation="slideLeft">
+    <section id="events" className="relative w-full py-24 px-6 section-glow section-divider section-alt overflow-hidden">
+      <AnimatedSection className="max-w-4xl mx-auto w-full" staggerChildren=".animate-reveal" stagger={0.08} animation="slideLeft">
         <div className="animate-reveal text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Schedule

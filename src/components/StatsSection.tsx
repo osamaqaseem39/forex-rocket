@@ -1,5 +1,4 @@
 import AnimatedSection from "@/components/AnimatedSection";
-
 export default function StatsSection() {
   const stats = [
     { value: "500+", label: "Traders", icon: "👥" },
@@ -9,17 +8,8 @@ export default function StatsSection() {
   ];
 
   return (
-    <section id="stats" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(10,10,15,0.7), rgba(10,10,15,0.9)), url('/bg-bear.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-dark opacity-80" />
-      <AnimatedSection className="max-w-6xl mx-auto" staggerChildren=".stat-card" stagger={0.1} animation="scale">
+    <section id="stats" className="relative w-full py-24 px-6 section-glow section-divider section-alt overflow-hidden">
+      <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".stat-card" stagger={0.1} animation="scale">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => (
             <div

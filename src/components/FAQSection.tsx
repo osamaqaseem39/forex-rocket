@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
-
 const faqs = [
   {
     question: "How do I join Forex Rocket?",
@@ -40,16 +39,8 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-24 px-6 section-glow overflow-hidden">
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: `linear-gradient(to bottom, rgba(18,18,26,0.7), rgba(18,18,26,0.9)), url('/bg-image2.png')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      />
-      <AnimatedSection className="max-w-2xl mx-auto" staggerChildren=".faq-item" stagger={0.06}>
+    <section id="faq" className="relative w-full py-24 px-6 section-glow section-divider section-alt overflow-hidden">
+      <AnimatedSection className="max-w-2xl mx-auto w-full" staggerChildren=".faq-item" stagger={0.06}>
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Frequently Asked Questions
