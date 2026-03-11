@@ -34,7 +34,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 section-glow overflow-hidden"
     >
       <div
         className="absolute inset-0 -z-10"
@@ -55,7 +55,7 @@ export default function HeroSection() {
         className="glass rounded-3xl p-8 sm:p-12 max-w-2xl w-full text-center mb-8"
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
-          <span className="text-[var(--accent)]">Forex</span> Rocket
+          <span className="text-[var(--accent)] text-glow">Forex</span> Rocket
         </h1>
         <p className="text-[var(--text-secondary)] text-lg sm:text-xl mb-8 max-w-md mx-auto">
           Premium Forex trading signals and analysis. Join a community of serious

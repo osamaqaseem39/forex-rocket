@@ -2,7 +2,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 
 export default function DisclaimerSection() {
   return (
-    <section id="disclaimer" className="relative py-16 px-6">
+    <section id="disclaimer" className="relative py-16 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{

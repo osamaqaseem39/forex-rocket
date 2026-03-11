@@ -40,7 +40,7 @@ export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-24 px-6">
+    <section id="faq" className="relative py-24 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{

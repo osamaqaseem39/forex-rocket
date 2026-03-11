@@ -35,7 +35,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section id="pricing" className="relative py-24 px-6">
+    <section id="pricing" className="relative py-24 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{

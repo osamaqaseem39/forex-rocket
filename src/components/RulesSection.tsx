@@ -10,7 +10,7 @@ export default function RulesSection() {
   ];
 
   return (
-    <section id="rules" className="relative py-24 px-6">
+    <section id="rules" className="relative py-24 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{

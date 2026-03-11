@@ -29,7 +29,7 @@ export default function HowItWorksSection() {
   ];
 
   return (
-    <section id="how-it-works" className="relative py-24 px-6">
+    <section id="how-it-works" className="relative py-24 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{

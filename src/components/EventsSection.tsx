@@ -33,7 +33,7 @@ export default function EventsSection() {
   ];
 
   return (
-    <section id="events" className="relative py-24 px-6">
+    <section id="events" className="relative py-24 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/bg-image2.png')" }}

@@ -25,7 +25,7 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="relative py-24 px-6">
+    <section id="features" className="relative py-24 px-6 section-glow overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{
