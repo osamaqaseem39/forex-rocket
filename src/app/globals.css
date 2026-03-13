@@ -9,8 +9,8 @@
   --glass-bg: rgba(255, 255, 255, 0.06);
   --glass-border: rgba(255, 255, 255, 0.15);
   --glass-highlight: rgba(255, 255, 255, 0.25);
-  --accent: #ef4444;
-  --accent-hover: #dc2626;
+  --accent: #eab308;
+  --accent-hover: #facc15;
   --text-primary: #f5f5f7;
   --text-secondary: #a1a1aa;
   --text-muted: #71717a;
@@ -40,18 +40,18 @@ body::before {
   inset: 0;
   background: radial-gradient(
       ellipse 100% 80% at 50% 20%,
-      rgba(239, 68, 68, 0.08) 0%,
-      rgba(239, 68, 68, 0.03) 40%,
+      rgba(234, 179, 8, 0.1) 0%,
+      rgba(234, 179, 8, 0.03) 40%,
       transparent 70%
     ),
     radial-gradient(
       ellipse 60% 50% at 80% 80%,
-      rgba(239, 68, 68, 0.04) 0%,
+      rgba(239, 68, 68, 0.05) 0%,
       transparent 50%
     ),
     radial-gradient(
       ellipse 60% 50% at 20% 60%,
-      rgba(239, 68, 68, 0.04) 0%,
+      rgba(234, 179, 8, 0.05) 0%,
       transparent 50%
     );
   pointer-events: none;
@@ -91,7 +91,7 @@ body::after {
   border-top-color: rgba(255, 255, 255, 0.35);
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.25),
-    0 0 40px rgba(239, 68, 68, 0.08),
+    0 0 40px rgba(234, 179, 8, 0.08),
     0 1px 0 rgba(255, 255, 255, 0.2) inset,
     0 -1px 0 rgba(255, 255, 255, 0.05) inset;
   transition: box-shadow 0.3s ease;
@@ -100,8 +100,8 @@ body::after {
 .glass:hover {
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.25),
-    0 0 50px rgba(239, 68, 68, 0.12),
-    0 0 80px rgba(239, 68, 68, 0.06),
+    0 0 50px rgba(234, 179, 8, 0.12),
+    0 0 80px rgba(234, 179, 8, 0.06),
     0 1px 0 rgba(255, 255, 255, 0.2) inset,
     0 -1px 0 rgba(255, 255, 255, 0.05) inset;
 }
@@ -118,7 +118,7 @@ body::after {
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-top-color: rgba(255, 255, 255, 0.2);
   box-shadow:
-    0 0 30px rgba(239, 68, 68, 0.05),
+    0 0 30px rgba(234, 179, 8, 0.05),
     0 1px 0 rgba(255, 255, 255, 0.15) inset,
     0 -1px 0 rgba(255, 255, 255, 0.03) inset;
 }
@@ -135,47 +135,47 @@ body::after {
     /* Top-left corner */
     radial-gradient(
       circle 35% at 5% 8%,
-      rgba(239, 68, 68, 0.35) 0%,
-      rgba(239, 68, 68, 0.15) 25%,
-      rgba(239, 68, 68, 0.05) 50%,
+      rgba(234, 179, 8, 0.25) 0%,
+      rgba(234, 179, 8, 0.1) 25%,
+      rgba(234, 179, 8, 0.03) 50%,
       transparent 70%
     ),
     /* Top-right corner */
     radial-gradient(
       circle 40% at 95% 12%,
-      rgba(239, 68, 68, 0.3) 0%,
-      rgba(239, 68, 68, 0.12) 25%,
-      rgba(239, 68, 68, 0.04) 50%,
+      rgba(239, 68, 68, 0.2) 0%,
+      rgba(239, 68, 68, 0.08) 25%,
+      rgba(239, 68, 68, 0.02) 50%,
       transparent 70%
     ),
     /* Bottom-left corner */
     radial-gradient(
       circle 30% at 8% 92%,
-      rgba(239, 68, 68, 0.28) 0%,
-      rgba(239, 68, 68, 0.1) 25%,
-      rgba(239, 68, 68, 0.03) 50%,
+      rgba(234, 179, 8, 0.2) 0%,
+      rgba(234, 179, 8, 0.08) 25%,
+      rgba(234, 179, 8, 0.02) 50%,
       transparent 70%
     ),
     /* Bottom-right corner */
     radial-gradient(
       circle 38% at 92% 88%,
-      rgba(239, 68, 68, 0.32) 0%,
-      rgba(239, 68, 68, 0.12) 25%,
-      rgba(239, 68, 68, 0.04) 50%,
+      rgba(239, 68, 68, 0.18) 0%,
+      rgba(239, 68, 68, 0.06) 25%,
+      rgba(239, 68, 68, 0.02) 50%,
       transparent 70%
     ),
     /* Random mid-left */
     radial-gradient(
       circle 25% at 15% 55%,
-      rgba(239, 68, 68, 0.2) 0%,
-      rgba(239, 68, 68, 0.06) 40%,
+      rgba(234, 179, 8, 0.12) 0%,
+      rgba(234, 179, 8, 0.04) 40%,
       transparent 65%
     ),
     /* Random mid-right */
     radial-gradient(
       circle 28% at 88% 42%,
-      rgba(239, 68, 68, 0.18) 0%,
-      rgba(239, 68, 68, 0.05) 40%,
+      rgba(239, 68, 68, 0.1) 0%,
+      rgba(239, 68, 68, 0.03) 40%,
       transparent 65%
     );
   pointer-events: none;
@@ -184,13 +184,13 @@ body::after {
 
 /* Accent glow for headings and highlights */
 .text-glow {
-  text-shadow: 0 0 20px rgba(239, 68, 68, 0.3), 0 0 40px rgba(239, 68, 68, 0.15);
+  text-shadow: 0 0 20px rgba(234, 179, 8, 0.35), 0 0 40px rgba(234, 179, 8, 0.15);
 }
 
 /* Section separation – alternating backgrounds and dividers */
 .section-divider {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: 0 -1px 0 0 rgba(239, 68, 68, 0.08);
+  box-shadow: 0 -1px 0 0 rgba(234, 179, 8, 0.08);
 }
 
 
@@ -198,17 +198,17 @@ body::after {
 .bg-gradient-dark {
   background: radial-gradient(
       ellipse 80% 50% at 50% -20%,
-      rgba(239, 68, 68, 0.15),
+      rgba(234, 179, 8, 0.12),
       transparent
     ),
     radial-gradient(
       ellipse 60% 40% at 100% 0%,
-      rgba(239, 68, 68, 0.08),
+      rgba(239, 68, 68, 0.06),
       transparent
     ),
     radial-gradient(
       ellipse 60% 40% at 0% 0%,
-      rgba(239, 68, 68, 0.06),
+      rgba(234, 179, 8, 0.08),
       transparent
     ),
     var(--bg-primary);

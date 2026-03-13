@@ -1,47 +1,51 @@
 import AnimatedSection from "@/components/AnimatedSection";
+
+const TELEGRAM_URL = "https://t.me/your-telegram-channel";
+
 export default function PricingSection() {
   const tiers = [
     {
       name: "Free",
-      price: "$0",
-      period: "forever",
-      description: "Get started and see what we offer",
+      price: "FREE",
+      period: "",
+      description: "Access the free Telegram channel with limited signals and basic info",
       features: [
-        "Access to Discord server",
-        "Limited daily signals",
-        "Community chat",
-        "Basic market updates",
+        "Join our free Telegram channel",
+        "Limited daily signals (XAUUSD & BTC)",
+        "Basic market updates and levels",
+        "Community updates",
       ],
-      cta: "Join Free",
+      cta: "Join Free Channel",
+      ctaHref: TELEGRAM_URL,
       highlighted: false,
     },
     {
-      name: "Premium",
-      price: "$29",
-      period: "/month",
-      description: "Full access for serious traders",
+      name: "VIP",
+      price: "VIP",
+      period: "— no monthly fee",
+      description: "Full VIP access via Vantage account or IB move",
       features: [
-        "All Free features",
-        "Unlimited signals",
-        "Priority analysis",
-        "Voice sessions",
-        "Trade alerts",
-        "1-on-1 support",
+        "All free channel content",
+        "Unlimited signals & priority analysis",
+        "Open a Vantage trading account and/or move your IB",
+        "Weekly Sunday webinars & outlook",
+        "Full trade alerts and support",
       ],
-      cta: "Go Premium",
+      cta: "Get VIP Access",
+      ctaHref: "#how-it-works",
       highlighted: true,
     },
   ];
 
   return (
-    <section id="pricing" className="relative w-full py-24 px-6 section-glow section-divider section-alt overflow-hidden">
+    <section id="pricing" className="relative w-full py-24 px-6 overflow-hidden">
       <AnimatedSection className="max-w-4xl mx-auto w-full" staggerChildren=".pricing-card" stagger={0.15}>
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
-            Choose Your Plan
+            Free Channel & VIP Access
           </h2>
           <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
-            Start free or unlock the full experience with Premium.
+            There is no paid plan. Join free for limited signals, or get VIP by opening a Vantage account or moving your IB.
           </p>
         </div>
 
@@ -49,19 +53,19 @@ export default function PricingSection() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`pricing-card glass rounded-3xl p-8 text-center w-full max-w-md ${
+              className={`pricing-card w-full max-w-md rounded-3xl p-8 text-center border border-white/10 bg-black/40 ${
                 tier.highlighted
-                  ? "border-2 border-[var(--accent)] ring-2 ring-[var(--accent)]/20"
+                  ? "border-2 border-yellow-400/50 ring-2 ring-yellow-400/20"
                   : ""
               }`}
             >
               <div className="mb-6">
-                <h3 className="text-xl font-semibold mb-2">{tier.name}</h3>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-4xl font-bold text-[var(--accent)]">
+                <h3 className="text-xl font-semibold mb-2 text-yellow-200">{tier.name}</h3>
+                <div className="flex items-baseline justify-center gap-1 flex-wrap">
+                  <span className="text-3xl font-bold text-yellow-400">
                     {tier.price}
                   </span>
-                  <span className="text-[var(--text-muted)]">{tier.period}</span>
+                  <span className="text-[var(--text-muted)] text-sm">{tier.period}</span>
                 </div>
                 <p className="text-[var(--text-secondary)] text-sm mt-2">
                   {tier.description}
@@ -73,19 +77,19 @@ export default function PricingSection() {
                     key={feature}
                     className="flex items-center justify-center gap-2 text-[var(--text-secondary)] text-sm"
                   >
-                    <span className="text-green-500">✓</span>
+                    <span className="text-yellow-400">✓</span>
                     {feature}
                   </li>
                 ))}
               </ul>
               <a
-                href="https://discord.gg/your-invite"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={tier.ctaHref}
+                target={tier.ctaHref.startsWith("http") ? "_blank" : undefined}
+                rel={tier.ctaHref.startsWith("http") ? "noopener noreferrer" : undefined}
                 className={`block w-full py-3 rounded-xl text-center font-medium transition-colors ${
                   tier.highlighted
-                    ? "bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white"
-                    : "glass-subtle hover:bg-white/10 text-[var(--text-primary)]"
+                    ? "bg-gradient-to-r from-yellow-400 to-amber-500 text-black hover:opacity-90"
+                    : "border border-white/20 hover:bg-white/10 text-white"
                 }`}
               >
                 {tier.cta}

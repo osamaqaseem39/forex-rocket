@@ -19,9 +19,9 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="relative w-full py-24 px-6 section-glow section-divider overflow-hidden">
+    <section id="about" className="relative w-full py-24 px-6 overflow-hidden">
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-10 opacity-30"
         style={{
           backgroundImage: `url('/bg-image2.png')`,
           backgroundSize: "cover",
@@ -29,26 +29,29 @@ export default function AboutSection() {
         }}
       />
       <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".value-card" stagger={0.15}>
-        <div className="glass rounded-3xl p-8 sm:p-12 mb-12 text-center">
+        <div className="rounded-3xl border border-white/10 bg-black/40 p-8 sm:p-12 mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Forex Rocket</h2>
           <p className="text-[var(--text-secondary)] leading-relaxed mb-6 max-w-2xl mx-auto">
-            Forex Rocket is a premium Discord server for Forex traders. We deliver
-            high-quality trading signals, market analysis, and a supportive
-            community for traders of all levels.
+            Forex Rocket is a Telegram-based signal channel focused on{" "}
+            <span className="font-semibold text-yellow-300">Gold (XAUUSD)</span> and{" "}
+            <span className="font-semibold text-red-300">Bitcoin (BTC)</span>. We deliver
+            clear levels, strict risk, and a community for serious traders—all on Telegram.
           </p>
           <p className="text-[var(--text-secondary)] leading-relaxed mb-6 max-w-2xl mx-auto">
-            Our signals are based on technical analysis, price action, and strict risk management.
-            We focus on quality over quantity – fewer setups with clearer risk-reward.
+            Our main focus is <strong className="text-yellow-200">XAUUSD</strong>. Signals are based on
+            technical analysis and price action. We focus on quality over quantity—fewer setups with
+            defined risk-reward. No monthly fee; VIP access via Vantage account or IB move.
           </p>
           <p className="text-[var(--text-secondary)] leading-relaxed mb-8 max-w-2xl mx-auto">
-            Whether you&apos;re new to Forex or an experienced trader, our community and resources
-            provide the structure and support to improve your trading.
+            Join the free channel for limited signals, or get VIP for full access. We run weekly
+            webinars every Sunday. Whether you&apos;re new or experienced, our structure and support
+            help you trade with clarity.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center">
             {values.map((value) => (
               <div
                 key={value.title}
-                className="value-card glass-subtle rounded-2xl p-6 border border-white/5 hover:border-white/10 transition-colors"
+                className="value-card rounded-2xl p-6 border border-white/10 bg-black/30 hover:border-yellow-400/30 transition-colors"
               >
                 <div className="text-3xl mb-3">{value.icon}</div>
                 <h3 className="font-semibold mb-2">{value.title}</h3>

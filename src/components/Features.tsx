@@ -24,14 +24,14 @@ export default function Features() {
   ];
 
   return (
-    <section id="features" className="relative w-full py-24 px-6 section-glow section-divider overflow-hidden">
+    <section id="features" className="relative w-full py-24 px-6 overflow-hidden">
       <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".feature-card" stagger={0.1} animation="fadeUp">
-        <div className="feature-card text-center mb-16">
+        <div className="feature-card text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             Why Join Forex Rocket?
           </h2>
           <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
-            Premium signals and a community built for serious Forex traders.
+            Gold (XAUUSD) &amp; BTC signals on Telegram. Free channel + VIP via Vantage or IB—no monthly fee.
           </p>
         </div>
 
@@ -39,12 +39,12 @@ export default function Features() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="feature-card glass rounded-2xl p-6 hover:border-white/15 transition-all duration-300 group"
+              className="feature-card rounded-2xl p-6 border border-white/10 bg-black/20 hover:border-yellow-400/30 transition-all duration-300 group"
             >
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <h3 className="text-lg font-semibold mb-2 text-yellow-100">{feature.title}</h3>
               <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
                 {feature.description}
               </p>

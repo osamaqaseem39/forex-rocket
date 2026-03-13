@@ -3,7 +3,7 @@ export default function DisclaimerSection() {
   return (
     <section id="disclaimer" className="relative w-full py-16 px-6 section-glow section-divider section-alt overflow-hidden">
       <AnimatedSection className="max-w-3xl mx-auto w-full" animation="fadeIn">
-        <div className="glass rounded-2xl p-8 border border-red-500/20 text-center">
+        <div className="rounded-2xl p-8 border border-red-500/30 bg-black/40 text-center">
           <h2 className="text-xl font-bold mb-4 flex items-center justify-center gap-2">
             <span>⚠️</span> Risk Disclaimer
           </h2>

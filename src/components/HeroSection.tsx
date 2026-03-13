@@ -1,8 +1,9 @@
-"use client";
+ "use client";
 
 import { useRef, useEffect } from "react";
 import gsap from "gsap";
-const gridPattern = `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+
+const gridPattern = `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,59 +34,117 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 section-glow overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center px-6 pt-28 pb-20 overflow-hidden"
     >
       <div
-        className="absolute inset-0 -z-10"
+        className="absolute inset-0 -z-20 opacity-80"
         style={{
-          backgroundImage: `url('/bg-image1.png')`,
+          backgroundImage:
+            "linear-gradient(to bottom right, rgba(0,0,0,0.85), rgba(0,0,0,0.9)), url('/xauusd-chart-bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       />
       <div
-        className="absolute inset-0 -z-10 opacity-30"
+        className="absolute inset-0 -z-10 opacity-40"
         style={{ backgroundImage: gridPattern }}
       />
 
-      <div
-        ref={contentRef}
-        className="glass rounded-3xl p-8 sm:p-12 max-w-2xl w-full text-center mb-8"
-      >
-        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4">
-          <span className="text-[var(--accent)] text-glow">Forex</span> Rocket
-        </h1>
-        <p className="text-[var(--text-secondary)] text-lg sm:text-xl mb-8 max-w-md mx-auto">
-          Premium Forex trading signals and analysis. Join a community of serious
-          traders and elevate your trading.
-        </p>
-        <a
-          href="https://discord.gg/your-invite"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold transition-all hover:scale-[1.02] active:scale-[0.98]"
+      <div className="relative max-w-6xl mx-auto w-full">
+        <div
+          ref={contentRef}
+          className="grid lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-12 items-center"
         >
-          <svg
-            className="w-6 h-6"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
-          </svg>
-          Join Discord
-        </a>
-      </div>
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-black/40 px-4 py-1 text-xs sm:text-sm text-yellow-200">
+              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span>Live XAUUSD &amp; BTC signals</span>
+              <span className="hidden sm:inline text-[var(--text-muted)]">
+                Focused on GOLD first
+              </span>
+            </div>
 
-      <div
-        ref={statusRef}
-        className="flex items-center gap-4 text-[var(--text-muted)] text-sm"
-      >
-        <span className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-          Online
-        </span>
-        <span>•</span>
-        <span>500+ traders</span>
+            <div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
+                Making{" "}
+                <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-red-500 bg-clip-text text-transparent">
+                  Gold
+                </span>{" "}
+                Trading Simple.
+              </h1>
+              <p className="text-[var(--text-secondary)] text-base sm:text-lg max-w-xl">
+                Forex Rocket is a data-driven signal channel focused on{" "}
+                <span className="font-semibold text-yellow-300">XAUUSD</span> and{" "}
+                <span className="font-semibold text-red-300">BTC</span>. Clear levels,
+                strict risk, and market breakdowns you can actually follow.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://t.me/your-telegram-channel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black font-semibold shadow-xl shadow-yellow-500/30 hover:shadow-yellow-400/40 transition-transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <svg
+                  className="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M9.99991 15.1701L9.83391 19.1681C10.1679 19.1681 10.3129 19.0241 10.4879 18.8501L12.1679 17.2441L16.1239 20.1481C16.8479 20.5501 17.3599 20.3441 17.5559 19.4461L19.9479 8.18212L19.9489 8.18112C20.1799 7.10812 19.5559 6.69012 18.8479 6.95612L4.22691 12.5461C3.18091 12.9541 3.19691 13.5541 4.04991 13.8201L7.79691 14.9931L16.3839 9.59512C16.7879 9.32812 17.1559 9.47612 16.8529 9.74312L9.99991 15.1701Z" />
+                </svg>
+                Join Free Telegram
+              </a>
+              <a
+                href="#how-it-works"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/15 bg-black/30 text-sm sm:text-base text-white hover:bg-white/5 transition-colors"
+              >
+                How VIP works
+              </a>
+            </div>
+
+            <div
+              ref={statusRef}
+              className="flex flex-wrap items-center gap-4 text-[var(--text-muted)] text-xs sm:text-sm"
+            >
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                500+ members following GOLD
+              </span>
+              <span className="hidden sm:inline">•</span>
+              <span>Weekly Sunday webinar &amp; outlook</span>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex justify-end">
+            <div className="relative w-80 h-[420px] rounded-[2.5rem] bg-gradient-to-b from-yellow-500/30 via-black/60 to-black/80 border border-yellow-400/40 shadow-[0_0_80px_rgba(250,204,21,0.35)] overflow-hidden">
+              <div className="absolute inset-x-10 top-6 h-6 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+                XAUUSD Focus
+              </div>
+              <div className="absolute inset-x-4 bottom-4 h-40 rounded-3xl bg-black/60 border border-white/10 p-4 flex flex-col justify-between">
+                <div className="space-y-1 text-xs text-[var(--text-secondary)]">
+                  <div className="flex justify-between">
+                    <span className="text-yellow-300 font-semibold">XAUUSD</span>
+                    <span className="text-green-400">+2.1% week</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-red-300 font-semibold">BTCUSD</span>
+                    <span className="text-green-400">+4.5% week</span>
+                  </div>
+                </div>
+                <div className="h-16 rounded-2xl bg-gradient-to-tr from-yellow-500/40 via-amber-400/20 to-red-500/40 relative overflow-hidden">
+                  <div className="absolute inset-0 opacity-80 bg-[radial-gradient(circle_at_0_100%,rgba(250,204,21,0.35),transparent_55%),radial-gradient(circle_at_100%_0,rgba(248,113,113,0.35),transparent_55%)]" />
+                  <div className="absolute inset-2 border border-yellow-300/40 rounded-2xl" />
+                </div>
+                <div className="flex justify-between items-center text-[10px] text-[var(--text-muted)]">
+                  <span>Member results</span>
+                  <span>For illustration only</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

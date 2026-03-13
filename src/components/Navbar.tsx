@@ -9,21 +9,22 @@ export default function Navbar() {
   const navLinks = [
     { href: "#features", label: "Features" },
     { href: "#pairs", label: "Pairs" },
-    { href: "#how-it-works", label: "How It Works" },
+    { href: "#results", label: "Results" },
+    { href: "#how-it-works", label: "How to Join" },
     { href: "#pricing", label: "Pricing" },
     { href: "#about", label: "About" },
     { href: "#events", label: "Schedule" },
-    { href: "#rules", label: "Rules" },
     { href: "#faq", label: "FAQ" },
+    { href: "#videos", label: "Videos" },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 px-4 pt-4">
-      <nav className="glass rounded-2xl border border-white/10 max-w-6xl mx-auto">
-        <div className="flex items-center justify-between px-6 py-4">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-b from-black/80 via-black/40 to-transparent backdrop-blur">
+      <nav className="max-w-6xl mx-auto px-4 py-4">
+        <div className="flex items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-2 text-lg font-semibold">
             <span className="text-2xl">🚀</span>
-            <span className="hidden sm:inline">Forex Rocket</span>
+            <span className="hidden sm:inline tracking-tight">Forex Rocket</span>
           </Link>
 
           <ul className="hidden md:flex items-center gap-8">
@@ -31,7 +32,7 @@ export default function Navbar() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                  className="text-sm text-[var(--text-secondary)] hover:text-white transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -41,16 +42,16 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://discord.gg/your-invite"
+              href="https://t.me/your-telegram-channel"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-sm font-medium transition-colors"
+              className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black text-sm font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition-all"
             >
-              Join Discord
+              Join Telegram
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden p-2 rounded-lg glass-subtle"
+              className="md:hidden p-2 rounded-full bg-white/5 border border-white/10"
               aria-label="Toggle menu"
             >
               <svg
@@ -80,14 +81,14 @@ export default function Navbar() {
         </div>
 
         {mobileMenuOpen && (
-          <div className="md:hidden px-6 pb-4 border-t border-white/5">
-            <ul className="flex flex-col gap-4 pt-4">
+          <div className="md:hidden pt-4">
+            <ul className="flex flex-col gap-4 pb-4 border-t border-white/10 mt-4">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="block text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                    className="block text-[var(--text-secondary)] hover:text-white transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -95,12 +96,12 @@ export default function Navbar() {
               ))}
               <li>
                 <a
-                  href="https://discord.gg/your-invite"
+                  href="https://t.me/your-telegram-channel"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-sm font-medium transition-colors"
+                  className="inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black text-sm font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition-all"
                 >
-                  Join Discord
+                  Join Telegram
                 </a>
               </li>
             </ul>

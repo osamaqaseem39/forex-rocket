@@ -10,8 +10,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Forex Rocket | Trading Signals",
-  description: "Join Forex Rocket Discord for premium Forex trading signals, analysis, and a community of serious traders.",
+  title: "Forex Rocket | XAUUSD & BTC Signals on Telegram",
+  description: "Gold (XAUUSD) and Bitcoin (BTC) trading signals on Telegram. Free channel + VIP via Vantage or IB. Weekly Sunday webinars. No monthly fee.",
 };
 
 export default function RootLayout({

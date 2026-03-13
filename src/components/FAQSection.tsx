@@ -6,27 +6,27 @@ const faqs = [
   {
     question: "How do I join Forex Rocket?",
     answer:
-      "Click the 'Join Discord' button anywhere on this page. You'll get an invite link to our Discord server. You need a Discord account to join.",
+      "Click 'Join Telegram' anywhere on this page to open our free Telegram channel. No payment required. For VIP access, open a Vantage trading account and/or move your IB—see How to Join.",
   },
   {
     question: "Are the signals free?",
     answer:
-      "We offer both free and premium tiers. Free members get limited daily signals. Premium ($29/mo) includes unlimited signals, priority analysis, voice sessions, and 1-on-1 support.",
+      "Yes. The free Telegram channel gives you limited signals and basic info. VIP access (unlimited signals, priority analysis, webinars) is free of charge—you get it by opening a Vantage account or moving your Introducing Broker (IB) to us. There is no paid plan or monthly fee.",
   },
   {
     question: "What pairs do you cover?",
     answer:
-      "We focus on major Forex pairs (EUR/USD, GBP/USD, USD/JPY, AUD/USD, etc.), plus XAU/USD (gold) and BTC/USD. Check the Pairs section for the full list.",
+      "We only trade XAUUSD (Gold) and BTC (Bitcoin). Our main focus is Gold (XAUUSD). We don't cover other Forex pairs.",
   },
   {
     question: "What does each signal include?",
     answer:
-      "Every signal has: pair, direction (BUY/SELL), entry price, stop-loss, take-profit, and risk-reward ratio. Lot size is based on your account and risk tolerance.",
+      "Every signal has: pair (XAUUSD or BTC), direction (BUY/SELL), entry, stop-loss, take-profit, and risk-reward. Lot size is based on your account and risk tolerance.",
   },
   {
-    question: "Do you offer copy trading?",
+    question: "When are the webinars?",
     answer:
-      "We post signals for you to copy manually or via your broker's copy service. We don't run a proprietary copy-trading platform.",
+      "We run weekly webinars on Sunday. Join the Telegram channel and check the Schedule section for the exact time and link.",
   },
   {
     question: "Is this financial advice?",
