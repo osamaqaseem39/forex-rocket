@@ -118,25 +118,33 @@ export default function HeroSection() {
           </div>
 
           <div className="hidden lg:flex justify-end">
-            <div className="relative w-80 h-[420px] rounded-[2.5rem] bg-gradient-to-b from-yellow-500/30 via-black/60 to-black/80 border border-yellow-400/40 shadow-[0_0_80px_rgba(250,204,21,0.35)] overflow-hidden">
-              <div className="absolute inset-x-10 top-6 h-6 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-[10px] tracking-[0.2em] uppercase text-[var(--text-muted)]">
+            <div className="relative w-80 h-[430px] rounded-[2.5rem] border border-yellow-400/60 bg-black/60 shadow-[0_0_60px_rgba(250,204,21,0.45)] overflow-hidden">
+              {/* subtle inner glow frame */}
+              <div className="pointer-events-none absolute inset-[1px] rounded-[2.4rem] bg-gradient-to-b from-yellow-500/20 via-black/80 to-black/95" />
+
+              {/* pill header */}
+              <div className="relative z-10 flex items-center justify-center mx-8 mt-6 h-7 rounded-full bg-black/70 border border-yellow-400/40 text-[10px] tracking-[0.28em] uppercase text-[var(--text-muted)]">
                 XAUUSD Focus
               </div>
-              <div className="absolute inset-x-4 bottom-4 h-40 rounded-3xl bg-black/60 border border-white/10 p-4 flex flex-col justify-between">
-                <div className="space-y-1 text-xs text-[var(--text-secondary)]">
-                  <div className="flex justify-between">
+
+              {/* bottom stats block */}
+              <div className="relative z-10 absolute inset-x-4 bottom-4 h-44 rounded-3xl bg-black/80 border border-yellow-400/40 px-4 py-4 flex flex-col justify-between">
+                <div className="space-y-1.5 text-xs text-[var(--text-secondary)]">
+                  <div className="flex items-center justify-between">
                     <span className="text-yellow-300 font-semibold">XAUUSD</span>
-                    <span className="text-green-400">+2.1% week</span>
+                    <span className="text-green-400 font-medium">+2.1% week</span>
                   </div>
-                  <div className="flex justify-between">
+                  <div className="flex items-center justify-between">
                     <span className="text-red-300 font-semibold">BTCUSD</span>
-                    <span className="text-green-400">+4.5% week</span>
+                    <span className="text-green-400 font-medium">+4.5% week</span>
                   </div>
                 </div>
-                <div className="h-16 rounded-2xl bg-gradient-to-tr from-yellow-500/40 via-amber-400/20 to-red-500/40 relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-80 bg-[radial-gradient(circle_at_0_100%,rgba(250,204,21,0.35),transparent_55%),radial-gradient(circle_at_100%_0,rgba(248,113,113,0.35),transparent_55%)]" />
-                  <div className="absolute inset-2 border border-yellow-300/40 rounded-2xl" />
+
+                <div className="relative h-16 rounded-2xl bg-gradient-to-tr from-yellow-400/35 via-amber-400/18 to-red-500/35 overflow-hidden">
+                  <div className="absolute inset-0 opacity-90 bg-[radial-gradient(circle_at_0_100%,rgba(250,204,21,0.45),transparent_55%),radial-gradient(circle_at_100%_0,rgba(248,113,113,0.5),transparent_55%)]" />
+                  <div className="absolute inset-[6px] rounded-2xl border border-yellow-200/50" />
                 </div>
+
                 <div className="flex justify-between items-center text-[10px] text-[var(--text-muted)]">
                   <span>Member results</span>
                   <span>For illustration only</span>

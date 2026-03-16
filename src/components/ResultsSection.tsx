@@ -18,8 +18,8 @@ export default function ResultsSection() {
         animation="fadeUp"
       >
         <div className="text-center mb-12 flex flex-col items-center gap-6">
-          <div className="w-full max-w-3xl rounded-3xl bg-black/40 overflow-hidden">
-            <div className="relative w-full aspect-[16/9]">
+          <div className="w-full max-w-4xl overflow-hidden">
+            <div className="relative w-full aspect-[16/9] rounded-3xl">
               <Image
                 src="/rocket-club.png"
                 alt="Forex Rocket Club"
