@@ -17,12 +17,25 @@ export default function ResultsSection() {
         stagger={0.06}
         animation="fadeUp"
       >
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Recent Results</h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
-            These screenshots are examples of recent results shared in our Telegram channel. Past performance does not
-            guarantee future results.
-          </p>
+        <div className="text-center mb-12 flex flex-col items-center gap-6">
+          <div className="w-full max-w-3xl rounded-3xl bg-black/40 overflow-hidden">
+            <div className="relative w-full aspect-[16/9]">
+              <Image
+                src="/rocket-club.png"
+                alt="Forex Rocket Club"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 768px, 100vw"
+              />
+            </div>
+          </div>
+          <div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Recent Results</h2>
+            <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
+              These screenshots are examples of recent results shared in our Telegram channel. Past performance does not
+              guarantee future results.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
