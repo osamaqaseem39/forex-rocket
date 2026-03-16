@@ -11,13 +11,13 @@ export default function RulesSection() {
   return (
     <section id="rules" className="relative w-full py-24 px-6 overflow-hidden">
       <AnimatedSection className="max-w-2xl mx-auto w-full" staggerChildren=".rule-item" stagger={0.1}>
-        <div className="rounded-3xl border border-white/10 bg-black/30 p-8 sm:p-12 text-center">
+        <div className="rounded-3xl bg-black/30 p-8 sm:p-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-yellow-100">Channel Rules</h2>
           <ul className="space-y-4 flex flex-col items-center">
             {rules.map((rule, i) => (
               <li
                 key={i}
-                className="rule-item flex items-center justify-center gap-3 text-[var(--text-secondary)] max-w-lg"
+                className="rule-item flex items-center justify-center gap-3 text-[var(--text-secondary)] max-w-lg transition-all duration-300 hover:bg-white/5 hover:-translate-y-1 rounded-2xl px-3 py-2"
               >
                 <span className="flex-shrink-0 w-8 h-8 rounded-lg border border-yellow-400/30 flex items-center justify-center text-sm font-medium text-yellow-300">
                   {i + 1}

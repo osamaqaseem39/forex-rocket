@@ -29,12 +29,12 @@ export default function SignalFormatSection() {
           </p>
         </div>
 
-        <div className="rounded-3xl border border-white/10 bg-black/40 p-8 sm:p-10 overflow-hidden">
+        <div className="rounded-3xl bg-black/30 p-8 sm:p-10 overflow-hidden">
           <div className="grid gap-4 sm:grid-cols-2 justify-items-center">
             {formatItems.map((item) => (
               <div
                 key={item.label}
-                className="format-item flex flex-col sm:flex-row sm:items-center gap-3 p-4 rounded-xl border border-white/10 w-full sm:max-w-sm text-center sm:text-left"
+                className="format-item flex flex-col sm:flex-row sm:items-center gap-3 p-4 rounded-xl w-full sm:max-w-sm text-center sm:text-left transition-all duration-300 hover:bg-white/5 hover:-translate-y-1"
               >
                 <div className="flex-shrink-0 w-24">
                   <span className="text-[var(--text-muted)] text-sm">{item.label}</span>

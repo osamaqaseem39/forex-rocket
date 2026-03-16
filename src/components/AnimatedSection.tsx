@@ -59,7 +59,7 @@ export default function AnimatedSection({
         delay: isStagger ? 0 : delay,
         stagger: isStagger ? stagger : 0,
         ease: "power3.out",
-        immediateRender: true,
+        immediateRender: false,
         scrollTrigger: {
           trigger: el,
           start,

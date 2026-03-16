@@ -53,10 +53,8 @@ export default function PricingSection() {
           {tiers.map((tier) => (
             <div
               key={tier.name}
-              className={`pricing-card w-full max-w-md rounded-3xl p-8 text-center border border-white/10 bg-black/40 ${
-                tier.highlighted
-                  ? "ring-2 ring-yellow-400/30"
-                  : ""
+              className={`pricing-card w-full max-w-md rounded-3xl p-8 text-center bg-black/30 transition-all duration-300 hover:bg-white/5 hover:-translate-y-1 ${
+                tier.highlighted ? "shadow-[0_0_40px_rgba(250,204,21,0.35)]" : ""
               }`}
             >
               <div className="mb-6">

@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const TELEGRAM_URL = "https://t.me/your-telegram-channel";
@@ -9,8 +12,29 @@ const resultImages = Array.from({ length: 10 }, (_, i) => ({
 }));
 
 export default function ResultsSection() {
+  const VISIBLE_COUNT = 3;
+  const [activeIndex, setActiveIndex] = useState(0);
+  const maxIndex = Math.max(resultImages.length - VISIBLE_COUNT, 0);
+
+  const goTo = (index: number) => {
+    if (index < 0) index = maxIndex;
+    if (index > maxIndex) index = 0;
+    setActiveIndex(index);
+  };
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActiveIndex((current) => {
+        const next = current + 1;
+        return next > maxIndex ? 0 : next;
+      });
+    }, 4000);
+
+    return () => clearInterval(id);
+  }, [maxIndex]);
+
   return (
-    <section id="results" className="relative w-full py-24 px-6 overflow-hidden">
+    <section id="results" className="relative w-full py-20 px-6 overflow-hidden">
       <AnimatedSection
         className="max-w-6xl mx-auto w-full"
         staggerChildren=".result-card"
@@ -24,7 +48,7 @@ export default function ResultsSection() {
                 src="/rocket-club.png"
                 alt="Forex Rocket Club"
                 fill
-                className="object-cover"
+                className="object-contain"
                 sizes="(min-width: 1024px) 768px, 100vw"
               />
             </div>
@@ -38,26 +62,66 @@ export default function ResultsSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6 justify-items-center">
-          {resultImages.map((img) => (
+        <div className="relative max-w-4xl mx-auto w-full mt-2">
+          <div className="overflow-hidden">
             <div
-              key={img.src}
-              className="result-card w-full max-w-[180px] rounded-2xl bg-black/40 overflow-hidden flex flex-col items-center text-center"
+              className="flex transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${(activeIndex * 100) / VISIBLE_COUNT}%)` }}
             >
-              <div className="relative w-full aspect-[3/4]">
-                <Image
-                  src={img.src}
-                  alt={img.label}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 180px, 50vw"
-                />
-              </div>
-              <div className="px-3 py-2">
-                <span className="text-xs text-[var(--text-muted)]">{img.label}</span>
-              </div>
+              {resultImages.map((img) => (
+                <div
+                  key={img.src}
+                  className="result-card flex-shrink-0 flex flex-col items-center text-center px-4 transition-transform duration-300 hover:-translate-y-1"
+                  style={{ width: `${100 / VISIBLE_COUNT}%` }}
+                >
+                  <div className="w-full max-w-[260px] sm:max-w-[320px] rounded-2xl bg-black/70 overflow-hidden">
+                    <div className="relative w-full aspect-[9/16]">
+                      <Image
+                        src={img.src}
+                        alt={img.label}
+                        fill
+                        className="object-contain"
+                        sizes="(min-width: 1024px) 320px, 80vw"
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* controls */}
+          <div className="mt-4 flex items-center justify-between gap-4">
+            <button
+              type="button"
+              onClick={() => goTo(activeIndex - 1)}
+              className="rounded-full border border-white/15 bg-black/40 w-9 h-9 flex items-center justify-center text-sm hover:bg-white/10 transition-colors"
+            >
+              ‹
+            </button>
+            <div className="flex items-center gap-2 flex-1 justify-center">
+              {resultImages.map((_, idx) => (
+                <button
+                  key={idx}
+                  type="button"
+                  onClick={() => goTo(idx)}
+                  className={`h-1.5 rounded-full transition-all ${
+                    idx === activeIndex
+                      ? "w-6 bg-yellow-400"
+                      : "w-2 bg-white/25 hover:bg-white/50"
+                  }`}
+                  aria-label={`Go to result ${idx + 1}`}
+                />
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => goTo(activeIndex + 1)}
+              className="rounded-full border border-white/15 bg-black/40 w-9 h-9 flex items-center justify-center text-sm hover:bg-white/10 transition-colors"
+            >
+              ›
+            </button>
+          </div>
         </div>
 
         <div className="mt-10 text-center">

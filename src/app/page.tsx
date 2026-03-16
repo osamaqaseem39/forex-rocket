@@ -1,4 +1,3 @@
-import HeroSection from "@/components/HeroSection";
 import Features from "@/components/Features";
 import StatsSection from "@/components/StatsSection";
 import TradingPairsSection from "@/components/TradingPairsSection";
@@ -14,6 +13,7 @@ import CTASection from "@/components/CTASection";
 import VideosSection from "@/components/VideosSection";
 import DisclaimerSection from "@/components/DisclaimerSection";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (

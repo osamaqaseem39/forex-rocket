@@ -39,12 +39,14 @@ export default function Features() {
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="feature-card rounded-2xl p-6 border border-white/10 bg-black/20 hover:border-yellow-400/30 transition-all duration-300 group"
+              className="px-6 py-8 flex flex-col text-left group rounded-2xl bg-transparent hover:bg-white/5 hover:-translate-y-1 transition-all duration-300"
             >
               <div className="text-3xl mb-4 group-hover:scale-110 transition-transform">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-semibold mb-2 text-yellow-100">{feature.title}</h3>
+              <h3 className="text-lg font-semibold mb-2 text-yellow-100">
+                {feature.title}
+              </h3>
               <p className="text-[var(--text-secondary)] text-sm leading-relaxed">
                 {feature.description}
               </p>

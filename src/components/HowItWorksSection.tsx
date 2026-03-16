@@ -7,8 +7,9 @@ export default function HowItWorksSection() {
     {
       step: 1,
       icon: "📱",
-      title: "Join the Telegram channel",
-      description: "Click 'Join Telegram' and open our free channel. You get limited signals and basic info—no payment required.",
+      title: "Open the free Telegram channel",
+      description:
+        "Click 'Join Telegram' anywhere on this page to open our free Telegram channel. It stays free—no card, no payment—just limited signals and basic info.",
     },
     {
       step: 2,
@@ -33,8 +34,8 @@ export default function HowItWorksSection() {
   return (
     <section id="how-it-works" className="relative w-full py-24 px-6 overflow-hidden">
       <AnimatedSection className="max-w-4xl mx-auto w-full" staggerChildren=".step-card" stagger={0.12} animation="fadeUp">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">
+        <div className="text-center mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-2">
             How to Join
           </h2>
           <p className="text-[var(--text-secondary)] max-w-xl mx-auto">
@@ -46,7 +47,7 @@ export default function HowItWorksSection() {
           {steps.map((item) => (
             <div
               key={item.step}
-              className="step-card flex flex-col sm:flex-row sm:items-center gap-6 rounded-2xl border border-white/10 bg-black/30 p-6 text-center sm:text-left"
+              className="step-card flex flex-col sm:flex-row sm:items-center gap-6 rounded-2xl bg-black/30 p-6 text-center sm:text-left transition-all duration-300 hover:bg-white/5 hover:-translate-y-1"
             >
               <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-yellow-500/20 border border-yellow-400/30 flex items-center justify-center text-3xl mx-auto sm:mx-0">
                 {item.icon}
