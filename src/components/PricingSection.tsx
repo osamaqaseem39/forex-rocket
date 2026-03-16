@@ -55,7 +55,7 @@ export default function PricingSection() {
               key={tier.name}
               className={`pricing-card w-full max-w-md rounded-3xl p-8 text-center border border-white/10 bg-black/40 ${
                 tier.highlighted
-                  ? "border-2 border-yellow-400/50 ring-2 ring-yellow-400/20"
+                  ? "ring-2 ring-yellow-400/30"
                   : ""
               }`}
             >
@@ -89,7 +89,7 @@ export default function PricingSection() {
                 className={`block w-full py-3 rounded-xl text-center font-medium transition-colors ${
                   tier.highlighted
                     ? "bg-gradient-to-r from-yellow-400 to-amber-500 text-black hover:opacity-90"
-                    : "border border-white/20 hover:bg-white/10 text-white"
+                    : "bg-white/5 hover:bg-white/10 text-white"
                 }`}
               >
                 {tier.cta}

@@ -29,7 +29,7 @@ export default function AboutSection() {
         }}
       />
       <AnimatedSection className="max-w-6xl mx-auto w-full" staggerChildren=".value-card" stagger={0.15}>
-        <div className="rounded-3xl border border-white/10 bg-black/40 p-8 sm:p-12 mb-12 text-center">
+        <div className="rounded-3xl bg-black/40 p-8 sm:p-12 mb-12 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-6">About Forex Rocket</h2>
           <p className="text-[var(--text-secondary)] leading-relaxed mb-6 max-w-2xl mx-auto">
             Forex Rocket is a Telegram-based signal channel focused on{" "}
@@ -51,7 +51,7 @@ export default function AboutSection() {
             {values.map((value) => (
               <div
                 key={value.title}
-                className="value-card rounded-2xl p-6 border border-white/10 bg-black/30 hover:border-yellow-400/30 transition-colors"
+                className="value-card rounded-2xl p-6 bg-black/30 text-center"
               >
                 <div className="text-3xl mb-3">{value.icon}</div>
                 <h3 className="font-semibold mb-2">{value.title}</h3>
