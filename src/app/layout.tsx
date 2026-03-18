@@ -22,6 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body className="antialiased font-sans">
+        <div className="ambient-glow ambient-glow--a" aria-hidden="true" />
+        <div className="ambient-glow ambient-glow--b" aria-hidden="true" />
+        <div className="ambient-glow ambient-glow--c" aria-hidden="true" />
         <ScrollTriggerRefresh />
         <Navbar />
         {children}

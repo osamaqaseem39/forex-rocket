@@ -60,6 +60,93 @@ body::after {
   z-index: -1;
 }
 
+/* Ambient glow layers – multiple blurred gold/red blobs (global) */
+.ambient-glow {
+  position: fixed;
+  inset: -22%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.75;
+  filter: blur(44px);
+  transform: translateZ(0);
+  mix-blend-mode: screen;
+}
+
+.ambient-glow--a {
+  background:
+    radial-gradient(circle 26% at 18% 22%, rgba(234, 179, 8, 0.24), transparent 62%),
+    radial-gradient(circle 20% at 68% 18%, rgba(239, 68, 68, 0.18), transparent 64%),
+    radial-gradient(circle 22% at 86% 70%, rgba(234, 179, 8, 0.14), transparent 66%);
+  animation: ambient-drift-a 20s ease-in-out infinite alternate;
+}
+
+.ambient-glow--b {
+  opacity: 0.6;
+  filter: blur(52px);
+  background:
+    radial-gradient(circle 22% at 12% 72%, rgba(239, 68, 68, 0.16), transparent 64%),
+    radial-gradient(circle 30% at 52% 48%, rgba(234, 179, 8, 0.12), transparent 70%),
+    radial-gradient(circle 18% at 86% 30%, rgba(239, 68, 68, 0.12), transparent 62%);
+  animation: ambient-drift-b 26s ease-in-out infinite alternate;
+}
+
+.ambient-glow--c {
+  opacity: 0.5;
+  filter: blur(58px);
+  background:
+    radial-gradient(circle 24% at 40% 16%, rgba(234, 179, 8, 0.14), transparent 66%),
+    radial-gradient(circle 18% at 90% 54%, rgba(239, 68, 68, 0.12), transparent 62%),
+    radial-gradient(circle 26% at 18% 48%, rgba(234, 179, 8, 0.1), transparent 70%);
+  animation: ambient-drift-c 34s ease-in-out infinite alternate;
+}
+
+@keyframes ambient-drift-a {
+  0% {
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(1.2%, -0.5%, 0) scale(1.03);
+  }
+  100% {
+    transform: translate3d(0.8%, 1.2%, 0) scale(1.02);
+  }
+}
+
+@keyframes ambient-drift-b {
+  0% {
+    transform: translate3d(1.2%, 1.4%, 0) scale(1.02);
+  }
+  50% {
+    transform: translate3d(-0.8%, 0.3%, 0) scale(1.05);
+  }
+  100% {
+    transform: translate3d(0.4%, -1.1%, 0) scale(1.03);
+  }
+}
+
+@keyframes ambient-drift-c {
+  0% {
+    transform: translate3d(-0.6%, 0.8%, 0) scale(1.03);
+  }
+  50% {
+    transform: translate3d(1.4%, -0.8%, 0) scale(1.06);
+  }
+  100% {
+    transform: translate3d(-1.1%, -0.3%, 0) scale(1.04);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ambient-glow {
+    animation: none;
+  }
+  .ambient-glow--a,
+  .ambient-glow--b,
+  .ambient-glow--c {
+    animation: none;
+  }
+}
+
 /* Glossy glass morphism – polished, reflective surface:
    • Translucent background with gradient sheen
    • Strong backdrop blur (smooth frosted look)
