@@ -1,7 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 export default function StatsSection() {
   const stats = [
-    { value: "500+", label: "Members", icon: "👥" },
+    { value: "5000+", label: "Members", icon: "👥" },
     { value: "Daily", label: "Signals", icon: "📊" },
     { value: "XAUUSD & BTC", label: "Pairs", icon: "💱" },
     { value: "Sunday", label: "Webinars", icon: "📅" },

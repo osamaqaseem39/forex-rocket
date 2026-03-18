@@ -1,10 +1,11 @@
 "use client";
 
 import { useRef, useEffect } from "react";
-import Image from "next/image";
 import gsap from "gsap";
 
 const gridPattern = `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+
+const TELEGRAM_URL = "https://t.me/+sH66bNiMugEwZTE8";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -35,7 +36,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen flex items-center justify-center px-6 pt-28 pb-20 overflow-hidden"
+      className="relative w-full min-h-screen flex items-center justify-center px-6 overflow-hidden"
     >
       <div
         className="absolute inset-0 -z-20 opacity-80"
@@ -51,12 +52,9 @@ export default function HeroSection() {
         style={{ backgroundImage: gridPattern }}
       />
 
-      <div className="relative max-w-6xl mx-auto w-full section-glow">
-        <div
-          ref={contentRef}
-          className="grid lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] gap-10 items-center"
-        >
-          <div className="space-y-8 max-w-2xl">
+      <div className="relative max-w-4xl mx-auto w-full section-glow">
+        <div ref={contentRef} className="flex items-center justify-center">
+          <div className="space-y-8 max-w-2xl text-center flex flex-col items-center">
             <div className="inline-flex items-center gap-2 rounded-full border border-yellow-400/30 bg-black/60 px-4 py-1.5 text-xs sm:text-sm text-yellow-200 shadow-[0_0_30px_rgba(250,204,21,0.35)]">
               <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
               <span>Live XAUUSD &amp; BTC signals</span>
@@ -73,7 +71,7 @@ export default function HeroSection() {
                 </span>{" "}
                 Trading Simple.
               </h1>
-              <p className="text-[var(--text-secondary)] text-base sm:text-lg max-w-xl">
+              <p className="text-[var(--text-secondary)] text-base sm:text-lg max-w-xl mx-auto">
                 Forex Rocket is a data-driven signal channel focused on{" "}
                 <span className="font-semibold text-yellow-300">XAUUSD</span> and{" "}
                 <span className="font-semibold text-red-300">BTC</span>. Clear levels,
@@ -83,7 +81,7 @@ export default function HeroSection() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="https://t.me/your-telegram-channel"
+                href={TELEGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black font-semibold shadow-xl shadow-yellow-500/30 hover:shadow-yellow-400/40 transition-transform hover:scale-[1.02] active:scale-[0.98]"
@@ -111,23 +109,11 @@ export default function HeroSection() {
             >
               <span className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                500+ members following GOLD
+                5000+ members following GOLD
               </span>
               <span className="hidden sm:inline">•</span>
               <span>Weekly Sunday webinar &amp; outlook</span>
             </div>
-          </div>
-
-          {/* Hero image */}
-          <div className="hidden lg:flex justify-end relative z-10">
-            <Image
-              src="/hero-image.png"
-              alt="Forex Rocket hero"
-              width={460}
-              height={480}
-              className="object-contain "
-              priority
-            />
           </div>
         </div>
       </div>

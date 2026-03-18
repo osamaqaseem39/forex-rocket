@@ -1,6 +1,6 @@
 import AnimatedSection from "@/components/AnimatedSection";
 
-const TELEGRAM_URL = "https://t.me/your-telegram-channel";
+const TELEGRAM_URL = "https://t.me/+sH66bNiMugEwZTE8";
 
 export default function HowItWorksSection() {
   const steps = [

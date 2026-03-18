@@ -80,7 +80,7 @@ export default function EventsSection() {
                 <h3 className="text-lg font-semibold mb-2">{event.title}</h3>
                 <p className="text-[var(--text-secondary)] text-sm mb-4">{event.description}</p>
                 <a
-                  href="https://t.me/your-telegram-channel"
+                  href="https://t.me/+sH66bNiMugEwZTE8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-yellow-300 hover:text-yellow-200 transition-colors"

@@ -42,7 +42,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://t.me/your-telegram-channel"
+              href="https://t.me/+sH66bNiMugEwZTE8"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black text-sm font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition-all"
@@ -96,7 +96,7 @@ export default function Navbar() {
               ))}
               <li>
                 <a
-                  href="https://t.me/your-telegram-channel"
+                  href="https://t.me/+sH66bNiMugEwZTE8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 w-full px-5 py-3 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black text-sm font-semibold shadow-lg shadow-yellow-500/30 hover:shadow-yellow-400/40 transition-all"

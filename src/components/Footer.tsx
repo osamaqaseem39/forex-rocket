@@ -31,7 +31,7 @@ export default function Footer() {
               XAUUSD &amp; BTC signals on Telegram. Gold-focused, no monthly fee.
             </p>
             <a
-              href="https://t.me/your-telegram-channel"
+              href="https://t.me/+sH66bNiMugEwZTE8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-yellow-400 to-amber-500 text-black text-sm font-semibold hover:opacity-90 transition-opacity"
@@ -70,7 +70,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="https://t.me/your-telegram-channel"
+                  href="https://t.me/+sH66bNiMugEwZTE8"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--text-secondary)] hover:text-yellow-300 text-sm transition-colors"
@@ -101,7 +101,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://t.me/your-telegram-channel"
+                href="https://t.me/+sH66bNiMugEwZTE8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-[var(--text-secondary)] hover:text-yellow-300 hover:border-yellow-400/50 transition-all"

@@ -1,6 +1,7 @@
 import AnimatedSection from "@/components/AnimatedSection";
 
-const TELEGRAM_URL = "https://t.me/your-telegram-channel";
+const TELEGRAM_URL = "https://t.me/+sH66bNiMugEwZTE8";
+const VIP_ADMIN_URL = "https://t.me/Forexrocketadminn";
 
 export default function PricingSection() {
   const tiers = [
@@ -32,7 +33,7 @@ export default function PricingSection() {
         "Full trade alerts and support",
       ],
       cta: "Get VIP Access",
-      ctaHref: "#how-it-works",
+      ctaHref: VIP_ADMIN_URL,
       highlighted: true,
     },
   ];

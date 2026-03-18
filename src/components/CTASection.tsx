@@ -12,7 +12,7 @@ export default function CTASection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://t.me/your-telegram-channel"
+              href="https://t.me/+sH66bNiMugEwZTE8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-yellow-400 via-amber-400 to-red-500 text-black font-semibold shadow-lg hover:opacity-90 transition-opacity"
@@ -23,10 +23,12 @@ export default function CTASection() {
               Join Telegram Now
             </a>
             <a
-              href="#how-it-works"
+              href="https://t.me/Forexrocketadminn"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold transition-colors"
             >
-              How to Get VIP
+              Get VIP
             </a>
           </div>
         </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import AnimatedSection from "@/components/AnimatedSection";
 
-const TELEGRAM_URL = "https://t.me/your-telegram-channel";
+const TELEGRAM_URL = "https://t.me/+sH66bNiMugEwZTE8";
 
 const resultImages = Array.from({ length: 10 }, (_, i) => ({
   src: `/${i + 1}.png`,
@@ -54,7 +54,7 @@ export default function ResultsSection() {
             </div>
           </div>
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Recent Results</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Member Results</h2>
             <p className="text-[var(--text-secondary)] max-w-2xl mx-auto">
               These screenshots are examples of recent results shared in our Telegram channel. Past performance does not
               guarantee future results.
